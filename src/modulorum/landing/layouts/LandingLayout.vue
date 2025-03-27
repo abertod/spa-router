@@ -1,7 +1,4 @@
 <template>
-  <!--<h1 class="text-3xl font-bold underline">Hola Mi Mundo</h1>-->
-  <!--<DomusPagina />-->
-  <!--<
   <div class="h-screen flex flex-col">
     <header class="flex items-center h-14 sm:h-16 px-4 md:px-6 lg:px-8 border-b border-gray-300">
       <div>
@@ -26,14 +23,5 @@
         © {{ new Date().getFullYear() }} Acme Corporation. Derechos reservados
       </p>
     </footer>
-  </div>-->
-
-  <RouterView />
+  </div>
 </template>
-
-<script setup lang="ts">
-//import DomusPagina from './modulorum/landing/paginae/DomusPagina.vue';
-import { RouterView } from 'vue-router';
-</script>
-
-<style scoped></style>
