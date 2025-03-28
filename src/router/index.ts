@@ -30,6 +30,16 @@ export const router = createRouter({
           name: 'contact',
           component: () => import('@/modulorum/landing/paginae/ContactusPagina.vue'),
         },
+        {
+          path: '/pokemon/:id',
+          name: 'pokemon',
+          props: (route) => {
+            console.log({ route });
+            const id = Number(route.params.id);
+            return isNaN(id) ? { id: 1 } : { id: id };
+          },
+          component: () => import('@/modulorum/pokemons/paginae/PokemonPagina.vue'),
+        },
       ],
     },
 
@@ -50,6 +60,12 @@ export const router = createRouter({
           component: () => import('@/modulorum/auth/paginae/RegisterPagina.vue'),
         },
       ],
+    },
+
+    {
+      path: '/:pathMatch(.*)*',
+      //redirect: '/',
+      component: () => import('@/modulorum/ordinarius/paginae/NotFound404.vue'),
     },
   ],
 });
