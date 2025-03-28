@@ -4,7 +4,7 @@
       Pokèmon <small class="text-blue-500">#{{ id }}</small>
     </h1>
     <img
-      :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`"
+      :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`"
       alt="Pokèmon"
       class="w-[200px] h-[200px]"
     />
