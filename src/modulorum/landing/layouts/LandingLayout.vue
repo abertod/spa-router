@@ -10,6 +10,7 @@
         <div class="space-x-4">
           <RouterLink :to="{ name: 'home' }">Home</RouterLink>
           <RouterLink to="/features">Features</RouterLink>
+          <!--<RouterLink to="/features" exact-active-class="underline">Features</RouterLink>   El exact-active-class crea una linea debajo del texto para remarcar en que pagina te encuentras-->
           <RouterLink to="/pricing">Pricing</RouterLink>
           <RouterLink to="/contact">Contact</RouterLink>
         </div>
@@ -21,7 +22,11 @@
     </header>
 
     <main class="flex-1 flex items-center justify-center py-6">
-      <RouterView />
+      <router-View v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" />
+        </keep-alive>
+      </router-View>
     </main>
 
     <footer class="flex items-center h-14 px-4 border-t border-gray-300 sm:h-16 md:px-6 lg:px-8">

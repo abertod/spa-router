@@ -5,5 +5,9 @@
     <p class="md:text-xl text-gray-500 mx-auto w-[600px]">
       Donum mox recipies pro fidelitate erga fructus nostros
     </p>
+    <p>Contador: {{ numerator }}</p>
+    <button @click="numerator++">+1</button>
   </div>
 </template>
+
+<script lang="ts" src="./DomusPagina.ts"></script>
