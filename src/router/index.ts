@@ -1,3 +1,4 @@
+import estPermititurGuard from '@/modulorum/auth/guards/est-permititur.guard';
 import DomusPagina from '@/modulorum/landing/paginae/DomusPagina.vue';
 //import PeculiaritatesPagina from '@/modulorum/landing/paginae/PeculiaritatesPagina.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
@@ -33,6 +34,7 @@ export const router = createRouter({
         {
           path: '/pokemon/:id',
           name: 'pokemon',
+          beforeEnter: [estPermititurGuard],
           props: (route) => {
             console.log({ route });
             const id = Number(route.params.id);
